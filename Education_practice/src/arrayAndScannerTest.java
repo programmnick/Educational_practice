@@ -1,8 +1,5 @@
-
 import java.util.Scanner;
-
 import javax.swing.JOptionPane;
-
 import java.io.File;
 
 public class arrayAndScannerTest {
@@ -10,7 +7,6 @@ public class arrayAndScannerTest {
 	  static Scanner scn;
 	  
   public static void main(String[] args) {
-
 	  openFile();
 	  readFile();
 	  out();	  	  
@@ -22,8 +18,7 @@ public class arrayAndScannerTest {
 				System.out.print(m[row][col]+ "   ");
 			}
 			System.out.println();
-	  }
-	
+	  }	
   }
 
   private static void readFile() {
@@ -42,6 +37,5 @@ public class arrayAndScannerTest {
 	} catch (Exception e) {
 		JOptionPane.showMessageDialog(null,"File not found");
 	}
-
   }
 }
