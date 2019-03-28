@@ -5,11 +5,11 @@ import java.io.File;
 public class arrayAndScannerTest {
 	  static String[][] m = new String[5][3];
 	  static Scanner scn;
-	    
+	  
   public static void main(String[] args) {
 	  openFile();
 	  readFile();
-	  out();		  	  
+	  out();	  	  
   }
 
   private static void out() {
