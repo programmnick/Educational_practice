@@ -33,7 +33,7 @@ public class BraceChecker {
                   return false; 
               }
               int count = 0;              
-              for (int p=i+1; p<braces.length()-1; p++) { //looking for first equal braces, count++
+              for (int p=i+1; p<braces.length()-1; p++) { //looking for first two equal braces, count++
                   count++;
                   if (ev.bracesEquals(braces.charAt(p), braces.charAt(p+1))){ // if found equality                    
                       int minus = -1; int plus = 2;                      
@@ -55,6 +55,7 @@ public class BraceChecker {
          i++;       
       }
       return true;
+      
     }
     
     public boolean bracesEquals(char first, char second) {
