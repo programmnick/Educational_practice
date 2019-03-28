@@ -19,43 +19,59 @@ public class BinaryArrayToNumber {
     }
 }
 
-Valid Braces - i'll finish it later
+
+Valid Braces 
 public class BraceChecker {
-
-  public boolean isValid(String braces) {
-  int count = 0;
   
-    for (int i=0; i<braces.length(); i++) { // looking for first braces inequality every 2 chars
-    
-        if (!braces.chatAt(i).equals(braces.charAt(i+1)))  { // if found inequality
-        
-            if ((braces.length()-i)%2 > 0) //parity check of the remaining numbers
-                return false;   
-            
-            for (int p=i+1; p<braces.length(); p++) { //looking for first equal chars, count++
-                count++;
-                if (braces.chatAt(p).equals(braces.charAt(p+1))){ // if found equality
-                    int minus = -1;
-                    int plus = 2;
-                    
-                    for (int o=0; o < count; o++) { //looking back count times to check that all previous braces were correct                                               
-                        if (!braces.chatAt(p + minus).equals(braces.charAt(p + plus))){ //false if found inequality   
-                           return false; 
-                        }       
-                        minus--;
-                        plus++; 
-                    }                    
-                    
-                    i = p + count;
-                    p = braces.length();
-                }
-               
-            }
-           
-        }  
-       i++;       
+  static BraceChecker ev = new BraceChecker();
+  
+  public boolean isValid(String braces) {      
+      for (int i=0; i<braces.length(); i++) { // looking for first braces inequality every 2 chars      
+        if (!ev.bracesEquals(braces.charAt(i), braces.charAt(i+1))) {      // if found inequality           
+              if (((braces.length()-i)%2 > 0) ||  braces.length()-i == 2 ) { //parity check of the remaining numbers
+                System.out.println("Parity problems");
+                  return false; 
+              }
+              int count = 0;              
+              for (int p=i+1; p<braces.length()-1; p++) { //looking for first equal braces, count++
+                  count++;
+                  if (ev.bracesEquals(braces.charAt(p), braces.charAt(p+1))){ // if found equality                    
+                      int minus = -1; int plus = 2;                      
+                      for (int o=0; o < count; o++) { //looking back (count) times to check that all previous braces were correct                                               
+                          if (!ev.bracesEquals(braces.charAt(p+minus), braces.charAt(p+plus))) { //false if found inequality   
+                              return false; 
+                          }       
+                          minus--;
+                          plus++; 
+                      }                                          
+                      i = p + count;
+                      p = braces.length();
+                  }
+                  if (p == braces.length()-2) {// if not found equal braces 
+                    return false;
+                  }
+              }             
+          }  
+         i++;       
+      }
+      return true;
     }
-    return true;
-  }
-
-}
+    
+    public boolean bracesEquals(char first, char second) {
+      switch (first) {
+    case '(':
+      if (second == ')')
+        return true;
+      break;
+    case '[':
+      if (second == ']')
+        return true;
+      break;
+    case '{':
+      if (second == '}')
+        return true;
+      break;    
+    }      
+      return false;
+    }
+ } 
