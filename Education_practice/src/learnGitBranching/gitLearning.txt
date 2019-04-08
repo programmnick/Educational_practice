@@ -1,1 +1,3 @@
 I've started learning git from learngitbranching.js.org
+
+08.04 done basic git course - 8 exercises from learngitbranching.js.org. Setted up an android studio + settings
