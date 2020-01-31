@@ -144,4 +144,24 @@ public int array667(int[] nums) {
   return count;
 }
 
+firstTwo (String-1 chapter)
+public String firstTwo(String str) {
+  
+  if (str.length() < 3) return str;
+  return str.substring(0,2);
+}
+
+repeatSeparator (String-2 chapter)
+public String repeatSeparator(String word, String sep, int count) {
+  String result = word;
+  
+  if (count == 0) return "";
+  
+  for (int i = 0; i < count-1; i++) {
+    if (count < 2) return result;
+    result += sep + word;
+  }
+  return result;
+}
+
 

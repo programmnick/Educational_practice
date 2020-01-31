@@ -23,3 +23,20 @@ public int sortaSum(int a, int b) {
   
   return a+b;
 }
+
+evenlySpaced (Logic-2 chapter)
+public boolean evenlySpaced(int a, int b, int c) {
+  int min = Math.min(c,Math.min(a,b));
+  int max = Math.max(c,Math.max(a,b));
+  int avg = 0;
+  
+  if (min == a && max == b) avg += c;
+  if (min == b && max == a) avg += c;
+  if (min == a && max == c) avg += b;
+  if (min == c && max == a) avg += b;
+  if (min == c && max == b) avg += a;
+  if (min == b && max == c) avg += a;
+  
+  if (((avg - min) == (max - avg)) || ((a == b) && (b == c))) return true;
+  return false;
+}
