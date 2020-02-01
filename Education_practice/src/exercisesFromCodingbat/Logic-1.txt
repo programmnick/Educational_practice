@@ -40,3 +40,70 @@ public boolean evenlySpaced(int a, int b, int c) {
   if (((avg - min) == (max - avg)) || ((a == b) && (b == c))) return true;
   return false;
 }
+
+luckySum (Logic-2 chapter)
+public int luckySum(int a, int b, int c) {
+  
+  int a1 = a;
+  int b1 = b;
+  int c1 = c;
+  
+  if (a==13) {
+    a1 = 0;
+    b1 = 0;
+    c1 = 0;
+  }
+  
+  if (b==13) {
+    b1 = 0;
+    c1 = 0;
+  }
+  
+  if (c==13) {
+    c1 = 0;
+  }
+  
+  return a1 + b1 + c1;
+}
+
+blackjack (Logic-2 chapter)
+
+public int blackjack(int a, int b) {
+  
+  if ((a > 21) && (b > 21)) return 0;
+  
+  if (a > 21) return b;
+  
+  if (b > 21) return a;
+  
+  if (a > b) {
+    return a;
+  } 
+  else {
+    return b;
+  }
+}
+
+loneSum (Logic-2 chapter)
+public int loneSum(int a, int b, int c) {
+  int a1 = a;
+  int b1 = b;
+  int c1 = c;
+  
+  if (a == b) {
+    a1 = 0;
+    b1 = 0;
+  }
+  
+  if (b == c) {
+    b1 = 0;
+    c1 = 0;
+  }
+  
+  if (a == c) {
+    a1 = 0;
+    c1 = 0;
+  }
+  
+  return a1+b1+c1;
+}
