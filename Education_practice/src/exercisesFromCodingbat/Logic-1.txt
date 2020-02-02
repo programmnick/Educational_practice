@@ -107,3 +107,72 @@ public int loneSum(int a, int b, int c) {
   
   return a1+b1+c1;
 }
+
+specialEleven
+public boolean specialEleven(int n) {
+  
+  if (((n % 11) == 0) || (((n-1) % 11) == 0)) return true;
+  
+  return false;
+}
+
+lastDigit
+public boolean lastDigit(int a, int b, int c) {
+  
+  String a1 = Integer.toString(a).substring(Integer.toString(a).length()-1);
+  String b1 = Integer.toString(b).substring(Integer.toString(b).length()-1);
+  String c1 = Integer.toString(c).substring(Integer.toString(c).length()-1);
+  
+  if ((a1.equals(b1) || a1.equals(c1)) || (b1.equals(a1) || b1.equals(c1)) || 
+  (c1.equals(a1) || c1.equals(b1))) return true;
+  
+  return false;
+}
+
+caughtSpeeding
+public int caughtSpeeding(int speed, boolean isBirthday) {
+  if (isBirthday) speed = speed - 5;
+  
+  if (speed <= 60) return 0;
+  if (speed >= 61 && speed <= 80) return 1;
+  if (speed >= 81) return 2;
+  
+  return 0;
+}
+
+
+teaParty
+public int teaParty(int tea, int candy) {
+  if ((tea < 5) || (candy <5 )) return 0;
+  
+  if ((tea / candy) >= 2) return 2;
+  if ((candy / tea) >= 2) return 2;
+  
+  return 1;
+}
+
+
+makeChocolate (Logic-2 chapter)
+public int makeChocolate(int small, int big, int goal) {
+
+  if ((big * 5) == goal) return 0;
+  
+  int remain = 0;
+  
+  for (int i=1; i < big+1; i++) {
+    if (goal - (i * 5) > 0) remain = (goal - (i*5));
+    if (goal - (i * 5) == 0) return 0;
+  }
+  
+  if (remain == 0) remain = goal;
+  
+  if (remain != small) {
+    for (int i=1; i < small+1; i++) {
+      if ( i == remain) return i;
+    }
+  } else {
+    return remain;
+  }
+  
+  return -1;
+}
