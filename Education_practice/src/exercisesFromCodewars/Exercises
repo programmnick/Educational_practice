@@ -75,3 +75,26 @@ public class BraceChecker {
       return false;
     }
  } 
+ 
+ Detect Pangram
+ public class PangramChecker {
+  public boolean check(String sentence){
+  
+    int count = 0;
+   
+    char[] letters = new char[] {'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'};
+    
+    for (int i = 0; i < letters.length; i++) {      
+      for (int s = 0; s < sentence.length(); s++) {        
+        if (Character.toLowerCase(sentence.charAt(s)) == letters[i]) {
+          count++;
+          break;
+        }
+      }
+    } 
+    
+    if (count == 26) return true;
+    
+    return false;    
+  }
+}
