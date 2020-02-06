@@ -98,3 +98,30 @@ public class BraceChecker {
     return false;    
   }
 }
+
+PigLatin
+public class PigLatin {
+    public static String pigIt(String str) {
+    
+        String result = "";        
+        int zero = -1;
+        
+        for (int i = 0; i < str.length(); i++) {   
+        
+          if ((str.substring(i,i+1).equals("!")) || (str.substring(i,i+1).equals("?"))) 
+            return result += str.substring(zero+1);          
+          
+          if (i == str.length()-1)  {
+            result += str.substring(zero+2) + str.substring(zero+1,zero+2) + "ay";
+            return result;          
+          }
+          
+          if ((str.substring(i,i+1).equals(" ")) && zero+2 < str.length()) {                              
+            result += str.substring(zero+2,i) + str.substring(zero+1,zero+2) + "ay" + " ";                
+            zero = i;                                                 
+          }
+        }
+        
+      return result;
+    }
+}
