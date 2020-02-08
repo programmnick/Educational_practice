@@ -1,0 +1,46 @@
+There will be list with Exercises from codingbat in format (title of exercise: 
+																			  code)
+scores100
+public boolean scores100(int[] scores) {
+  
+  for (int i = 0; i < scores.length - 1; i++) {
+    if (scores[i] == scores[i+1]) return true;
+  }
+  
+  return false;
+}
+
+matchUp
+public int matchUp(String[] a, String[] b) {
+  int count = 0;
+  
+  for (int i = 0; i < a.length; i++) {
+    if ((a[i].length() > 0) && (b[i].length() > 0)) {
+      if (a[i].substring(0,1).equals(b[i].substring(0,1)))
+        count++;
+    }
+  }
+  
+  return count;
+}
+
+commonTwo
+public int commonTwo(String[] a, String[] b) {
+		  
+		int count = 0;
+			  
+		  for (int i = 0; (i < a.length); i++) {
+	      for (int s = 0; s < b.length; s++) {
+	        
+	        if ((i > 0) && (a[i].substring(0,1).equals(a[i-1].substring(0,1))))
+			      break;
+			      
+			    if (a[i].substring(0,1).equals(b[s].substring(0,1))) {
+			      count++;
+			      break;
+			    }
+			  }
+			}
+			
+		return count;
+}
