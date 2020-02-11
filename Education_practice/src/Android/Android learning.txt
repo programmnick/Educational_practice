@@ -1,0 +1,3 @@
+Here I will post progress information on my android training.
+
+Downloaded and configured android studio + AVD. Tested the first app.
