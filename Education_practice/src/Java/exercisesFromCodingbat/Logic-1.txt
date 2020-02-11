@@ -1,0 +1,178 @@
+There will be list with Exercises from codingbat in format (title of exercise: 
+																			  code)
+
+cigarParty
+public boolean cigarParty(int cigars, boolean isWeekend) {
+  if (isWeekend) {
+    return (cigars > 39);
+  }
+  return (cigars >= 40 && cigars <=60);
+}
+
+dateFashion
+public int dateFashion(int you, int date) {
+  if ((you > 7 && !(date < 3)) || (date > 7 && !(you < 3))) return 2;
+  if (you < 3 || date <3) return 0;
+  return 1;
+}
+
+sortaSum
+public int sortaSum(int a, int b) {
+  if (a+b >= 10 && a+b <= 19)
+  return 20;  
+  
+  return a+b;
+}
+
+evenlySpaced (Logic-2 chapter)
+public boolean evenlySpaced(int a, int b, int c) {
+  int min = Math.min(c,Math.min(a,b));
+  int max = Math.max(c,Math.max(a,b));
+  int avg = 0;
+  
+  if (min == a && max == b) avg += c;
+  if (min == b && max == a) avg += c;
+  if (min == a && max == c) avg += b;
+  if (min == c && max == a) avg += b;
+  if (min == c && max == b) avg += a;
+  if (min == b && max == c) avg += a;
+  
+  if (((avg - min) == (max - avg)) || ((a == b) && (b == c))) return true;
+  return false;
+}
+
+luckySum (Logic-2 chapter)
+public int luckySum(int a, int b, int c) {
+  
+  int a1 = a;
+  int b1 = b;
+  int c1 = c;
+  
+  if (a==13) {
+    a1 = 0;
+    b1 = 0;
+    c1 = 0;
+  }
+  
+  if (b==13) {
+    b1 = 0;
+    c1 = 0;
+  }
+  
+  if (c==13) {
+    c1 = 0;
+  }
+  
+  return a1 + b1 + c1;
+}
+
+blackjack (Logic-2 chapter)
+
+public int blackjack(int a, int b) {
+  
+  if ((a > 21) && (b > 21)) return 0;
+  
+  if (a > 21) return b;
+  
+  if (b > 21) return a;
+  
+  if (a > b) {
+    return a;
+  } 
+  else {
+    return b;
+  }
+}
+
+loneSum (Logic-2 chapter)
+public int loneSum(int a, int b, int c) {
+  int a1 = a;
+  int b1 = b;
+  int c1 = c;
+  
+  if (a == b) {
+    a1 = 0;
+    b1 = 0;
+  }
+  
+  if (b == c) {
+    b1 = 0;
+    c1 = 0;
+  }
+  
+  if (a == c) {
+    a1 = 0;
+    c1 = 0;
+  }
+  
+  return a1+b1+c1;
+}
+
+specialEleven
+public boolean specialEleven(int n) {
+  
+  if (((n % 11) == 0) || (((n-1) % 11) == 0)) return true;
+  
+  return false;
+}
+
+lastDigit
+public boolean lastDigit(int a, int b, int c) {
+  
+  String a1 = Integer.toString(a).substring(Integer.toString(a).length()-1);
+  String b1 = Integer.toString(b).substring(Integer.toString(b).length()-1);
+  String c1 = Integer.toString(c).substring(Integer.toString(c).length()-1);
+  
+  if ((a1.equals(b1) || a1.equals(c1)) || (b1.equals(a1) || b1.equals(c1)) || 
+  (c1.equals(a1) || c1.equals(b1))) return true;
+  
+  return false;
+}
+
+caughtSpeeding
+public int caughtSpeeding(int speed, boolean isBirthday) {
+  if (isBirthday) speed = speed - 5;
+  
+  if (speed <= 60) return 0;
+  if (speed >= 61 && speed <= 80) return 1;
+  if (speed >= 81) return 2;
+  
+  return 0;
+}
+
+
+teaParty
+public int teaParty(int tea, int candy) {
+  if ((tea < 5) || (candy <5 )) return 0;
+  
+  if ((tea / candy) >= 2) return 2;
+  if ((candy / tea) >= 2) return 2;
+  
+  return 1;
+}
+
+
+makeChocolate (Logic-2 chapter)
+public int makeChocolate(int small, int big, int goal) {
+
+  if ((big * 5) == goal) return 0;
+  
+  int remain = 0;
+  
+  for (int i=1; i < big+1; i++) {
+    if (goal - (i * 5) > 0) remain = (goal - (i*5));
+    if (goal - (i * 5) == 0) return 0;
+  }
+  
+  if (remain == 0) remain = goal;
+  
+  if (remain != small) {
+    for (int i=1; i < small+1; i++) {
+      if ( i == remain) return i;
+    }
+  } else {
+    return remain;
+  }
+  
+  return -1;
+}

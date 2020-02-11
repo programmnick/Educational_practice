@@ -1,0 +1,185 @@
+There will be list with Exercises from codingbat in format (title of exercise: 
+																			  code)
+
+diff21:
+public int diff21(int n) {
+  int dif = n - 21;
+  if (n > 21) {
+    return (Math.abs(dif) * 2);
+  }
+  return Math.abs(dif);
+}
+
+backAround:
+public String backAround(String str) {
+  if (str.length() >= 1) {
+    char last = str.charAt(str.length() - 1);
+    return last + str + last;
+  }
+  return str;
+}
+
+startHI
+public boolean startHi(String str) {
+  if (str.length() >= 2 && str.substring(0,2).equals("hi")) {
+    return true;
+  }
+  return false;
+}
+
+hasTeen
+public boolean hasTeen(int a, int b, int c) {
+  return ((a >= 13 && a <= 19) || (b >= 13 && b <= 19) || (c >= 13 && c <= 19));
+}
+
+mixStart
+public boolean mixStart(String str) {
+  if (str.length() > 2 && str.substring(1,3).equals("ix")) {
+    return true;
+  }
+  return false;
+}
+
+close10
+public int close10(int a, int b) {
+  int a1 = Math.abs(10 - a);
+  int b1 = Math.abs(10 - b);
+  if (a1 == b1) {
+    return 0;
+  }
+  if (a1 < b1 ) {
+    return a;
+  }
+  if (b1 < a1) {
+    return b;
+  }
+  return 22;
+}
+
+posNeg
+public boolean posNeg(int a, int b, boolean negative) {
+  if (negative) {
+    return (a < 0 && b < 0);
+  }
+  else {
+    return ((a < 0 && b > 0) || (a > 0 && b < 0));
+  }
+}
+
+frontBack
+public String frontBack(String str) {
+  int a = str.length() - 1;
+  if (str == "") {
+    return str;
+  }
+  char first = str.charAt(0);
+  char last = str.charAt(a);
+  char[] strVchar = str.toCharArray();
+  strVchar[0] = last;
+  strVchar[a] = first;
+  str = String.valueOf(strVchar);
+  return str;
+}
+
+or35
+public boolean or35(int n) {
+  if (n % 3 == 0 || n % 5 == 0) {
+    return true;
+  }
+  return false;
+}
+
+IoneTeen
+public boolean loneTeen(int a, int b) {
+  boolean as = (a >= 13 && a <= 19);
+  boolean ab = (b >= 13 && b <= 19);
+  if (as == ab) {
+    return false;
+  } 
+  if (as || ab) {
+    return true;
+  }
+  return false;
+}
+
+in3050
+public boolean in3050(int a, int b) {
+  if (((a > 29 && a < 41) && (b > 29 && b < 41)) || ((a > 39 && a < 51) && (b > 39 && b < 51))) {
+    return true;
+  }
+  return false;
+}
+
+lastDigit
+public boolean lastDigit(int a, int b) {
+   return (a % 10 == b % 10);
+}
+
+sumDouble
+public int sumDouble(int a, int b) {
+  if (a == b) {
+    return ((a+b)*2);
+  }
+  return (a+b);
+}
+
+notString
+public String notString(String str) {
+  if (str.length() >= 3 && str.substring(0, 3).equals("not")) {
+    return str;
+  }
+  return "not " + str;
+}
+
+front3
+public String front3(String str) {
+  if (str.length() <= 3) {
+		    return str = str + str + str;
+		  }
+		  char[] tri = str.toCharArray();
+		  char[] triton = Arrays.copyOfRange(tri, 0, 3);
+		  return str = String.valueOf(triton) + String.valueOf(triton) + String.valueOf(triton);
+}
+
+front22
+public String front22(String str) {
+  if (str.length() > 2) {
+  String ch = str.substring(0,2);
+  str = ch + str + ch;
+  return str;
+  }
+return str+str+str;
+}
+
+in1020
+public boolean in1020(int a, int b) {
+   return ((a >= 10 && a <= 20) || (b >= 10 && b <= 20));
+}
+
+intMax
+public int intMax(int a, int b, int c) {
+   if (a > b && a > c) {
+     return a;
+   }
+   if (b > a && b > c) {
+     return b;
+   }
+   if (c > a && c > b) {
+     return c;
+   }
+   return a;
+}
+
+max1020
+public int max1020(int a, int b) {
+   if (((a > 9 && a < 21) && (b > 9 && b < 21))) {
+     return Math.max(a,b);
+   }
+   if (a > 9 && a < 21) {
+     return a;
+   }
+   if (b > 9 && b < 21) {
+     return b;
+   }
+   return 0;
+}

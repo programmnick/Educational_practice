@@ -1,0 +1,127 @@
+There will be list with Exercises from codewars in format (title of exercise: 
+																			  code)
+
+Ones and Zeros:
+import java.util.List;
+
+public class BinaryArrayToNumber {
+        
+    public static int ConvertBinaryArrayToInt(List<Integer> binary) {
+         int len = binary.size();
+         int result = 0;
+         int bin = 1;
+        for (int i=1; i < len+1;  i++) {
+          if (binary.get(len-i) == 1)
+              result += bin;
+          bin = bin*2;
+        }
+       return result;
+    }
+}
+
+
+Valid Braces 
+public class BraceChecker {
+  
+  static BraceChecker ev = new BraceChecker();
+  
+  public boolean isValid(String braces) {      
+      for (int i=0; i<braces.length(); i++) { // looking for first braces inequality every 2 chars      
+        if (!ev.bracesEquals(braces.charAt(i), braces.charAt(i+1))) {      // if found inequality           
+              if (((braces.length()-i)%2 > 0) ||  braces.length()-i == 2 ) { //parity check of the remaining numbers
+                System.out.println("Parity problems");
+                  return false; 
+              }
+              int count = 0;              
+              for (int p=i+1; p<braces.length()-1; p++) { //looking for first equal braces, count++
+                  count++;
+                  if (ev.bracesEquals(braces.charAt(p), braces.charAt(p+1))){ // if found equality                    
+                      int minus = -1; int plus = 2;                      
+                      for (int o=0; o < count; o++) { //looking back (count) times to check that all previous braces were correct                                               
+                          if (!ev.bracesEquals(braces.charAt(p+minus), braces.charAt(p+plus))) { //false if found inequality   
+                              return false; 
+                          }       
+                          minus--;
+                          plus++; 
+                      }                                          
+                      i = p + count;
+                      p = braces.length();
+                  }
+                  if (p == braces.length()-2) {// if not found equal braces 
+                    return false;
+                  }
+              }             
+          }  
+         i++;       
+      }
+      return true;
+    }
+    
+    public boolean bracesEquals(char first, char second) {
+      switch (first) {
+    case '(':
+      if (second == ')')
+        return true;
+      break;
+    case '[':
+      if (second == ']')
+        return true;
+      break;
+    case '{':
+      if (second == '}')
+        return true;
+      break;    
+    }      
+      return false;
+    }
+ } 
+ 
+ Detect Pangram
+ public class PangramChecker {
+  public boolean check(String sentence){
+  
+    int count = 0;
+   
+    char[] letters = new char[] {'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'};
+    
+    for (int i = 0; i < letters.length; i++) {      
+      for (int s = 0; s < sentence.length(); s++) {        
+        if (Character.toLowerCase(sentence.charAt(s)) == letters[i]) {
+          count++;
+          break;
+        }
+      }
+    } 
+    
+    if (count == 26) return true;
+    
+    return false;    
+  }
+}
+
+PigLatin
+public class PigLatin {
+    public static String pigIt(String str) {
+    
+        String result = "";        
+        int zero = -1;
+        
+        for (int i = 0; i < str.length(); i++) {   
+        
+          if ((str.substring(i,i+1).equals("!")) || (str.substring(i,i+1).equals("?"))) 
+            return result += str.substring(zero+1);          
+          
+          if (i == str.length()-1)  {
+            result += str.substring(zero+2) + str.substring(zero+1,zero+2) + "ay";
+            return result;          
+          }
+          
+          if ((str.substring(i,i+1).equals(" ")) && zero+2 < str.length()) {                              
+            result += str.substring(zero+2,i) + str.substring(zero+1,zero+2) + "ay" + " ";                
+            zero = i;                                                 
+          }
+        }
+        
+      return result;
+    }
+}
