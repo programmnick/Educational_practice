@@ -1,4 +1,10 @@
 Here i will post my finished courses in Udacity.com
 
-How to Install Android Studio https://www.udacity.com/course/how-to-install-android-studio--ud808
 
+How to Install Android Studio https://www.udacity.com/course/how-to-install-android-studio--ud808
+Lesson1: chapters 1-10;
+
+
+Android Basics: User Interface https://www.udacity.com/course/android-basics-user-interface--ud834
+Lesson1: chapters 1-16;
+Lesson2: chapters 1-2;
