@@ -7,4 +7,4 @@ Lesson1: chapters 1-10;
 
 Android Basics: User Interface https://www.udacity.com/course/android-basics-user-interface--ud834
 Lesson1: chapters 1-16;
-Lesson2: chapters 1-2;
+Lesson2: chapters 1-12;
