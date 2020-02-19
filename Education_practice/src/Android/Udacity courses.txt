@@ -11,4 +11,4 @@ Lesson1 (Building Layouts: Part 2) - chapters 1-12;
 Lesson3 (Practice Set: Building Layouts) - chapters 1-31;
 
 Android Basics by Google https://www.udacity.com/course/android-basics-nanodegree-by-google--nd803
-Lesson1 (Making an App Interactive: Part 1) - chapters 1-5;
+Lesson1 (Making an App Interactive: Part 1) - chapters 1-23;
