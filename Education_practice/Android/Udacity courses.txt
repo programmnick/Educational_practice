@@ -15,4 +15,5 @@ Lesson3 (Practice Set Making an App Interactive) - chapters 1-34;
 Lesson4 (Project Score Keeper App) - chapters 1-3;
 Lesson5 (Object-Oriented Programming: Part 1) - chapters 1-23;
 Lesson6 (Object-Oriented Programming: Part 2) - chapters 1-28;
-Lesson7 (Intents and Activities) - chapters 1-15;
+Lesson7 (Intents and Activities) - chapters 1-20;
+Lesson8 (Arrays, Lists, Loops, & Custom Classes) - chapters 1-10;
