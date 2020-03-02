@@ -17,3 +17,4 @@ Lesson5 (Object-Oriented Programming: Part 1) - chapters 1-23;
 Lesson6 (Object-Oriented Programming: Part 2) - chapters 1-28;
 Lesson7 (Intents and Activities) - chapters 1-20;
 Lesson8 (Arrays, Lists, Loops, & Custom Classes) - chapters 1-32;
+Lesson9 (Images and Visual Polish) - chapters 1-10;
