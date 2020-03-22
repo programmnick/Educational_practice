@@ -19,3 +19,4 @@ Android Basics by Google https://www.udacity.com/course/android-basics-nanodegre
  Lesson8 (Arrays, Lists, Loops, & Custom Classes) - chapters 1-32;
  Lesson9 (Images and Visual Polish) - chapters 1-18;
  Lesson10 (Activity Lifecycle and Audio Playback) - chapters 1-26;
+ Lesson11 (Fragments) - chapters 1-6;
