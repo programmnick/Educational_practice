@@ -164,4 +164,36 @@ public String repeatSeparator(String word, String sep, int count) {
   return result;
 }
 
+frontTimes
+public String frontTimes(String str, int n) {
+  String result = "";
+  
+  if (str.length() >= 3) {
+    for (int i = 0; i < n; i++){
+      result += str.substring(0,3);
+    }
+  } else {
+    for (int i = 0; i < n; i++){
+      result += str;
+    }
+  }  
+  return result;
+}
 
+stringYak
+blic String stringYak(String str) {
+  String result = "";
+  
+  for (int i = 0; i+2 < str.length(); i++) {
+    if (str.substring(i,i+3).equals("yak")) {
+      if (i == 0) {
+        result = (str.substring(i+3));
+        str = result;
+      } else {
+        result = (str.substring(0,i) + str.substring(i+3));
+        str = result;
+      }
+    }
+  }
+  return result;
+}

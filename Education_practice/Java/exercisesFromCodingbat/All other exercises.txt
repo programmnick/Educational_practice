@@ -44,3 +44,27 @@ public int commonTwo(String[] a, String[] b) {
 			
 		return count;
 }
+
+String-3 equalIsNot
+public boolean equalIsNot(String str) {
+  int countis = 0;
+  int countnot = 0;
+  
+  for (int i = 0; i + 1 < str.length(); i++) {
+    if ((str.substring(i,i+2).equals("is"))) countis++;
+    if ((i + 2 < str.length()) && (str.substring(i,i+3).equals("not"))) countnot++;
+  }
+  return countis == countnot;
+}
+
+Logic-2 blackjack
+public int blackjack(int a, int b) {
+  int aa = 0;
+  int bb = 0;
+  
+  if (a <= 21) aa = a;
+  if (b <= 21) bb = b;
+  if ((aa > 0) || (bb > 0)) return Math.max(aa,bb);
+  
+  return 0;
+}
