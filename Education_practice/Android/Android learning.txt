@@ -7,3 +7,5 @@ The lessons that i learned from the site http://developer.alexanderklimov.ru/ {
 	ListActivity http://developer.alexanderklimov.ru/android/listactivity.php;
 	ArrayAdapter http://developer.alexanderklimov.ru/android/listview/multiselect_customarrayadapter.php;
 }
+
+Repeated the lessons I learned on udacity
