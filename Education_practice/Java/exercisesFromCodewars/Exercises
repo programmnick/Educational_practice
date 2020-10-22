@@ -125,3 +125,106 @@ public class PigLatin {
       return result;
     }
 }
+
+
+Sum of Digits / Digital Root
+public class DRoot {
+  public static int digital_root(int n) {
+    int result = 0;
+    
+    while (n > 9) {
+        result = 0;
+        String s = String.valueOf(n);   
+      
+        for (int a = 0; a < s.length(); a++) {
+          result += Integer.parseInt(s.substring(a,a+1));
+        }
+        n = result;       
+     }
+    
+    return result;
+    }
+  }
+
+
+public class Kata {
+  public static int[] sortArray(int[] array) {
+    int a = 0;
+    int b = 0;
+    int i = 0;
+    int s = 0;
+   
+    if (array.length == 0) return array;
+    
+    int z = 0;
+    while (z < array.length) { 	
+   
+    for (i = 0; i < array.length; i++) {
+      if (array[i]%2 != 0) {
+        a = array[i];
+        
+        for (s = i+1; s < array.length; s++) {       	
+           if (array[s]%2 != 0) {
+             b = array[s];
+             break;
+           }
+        }
+        
+        if (a > b && s < array.length) {
+          array[i] = b;
+          array[s] = a;
+        } else {
+          array[i] = a;
+          if (s < array.length) array[s] = b;
+        }
+      
+      }
+      z++;
+    }
+    }
+    
+  return array;
+  }
+}
+
+Sort the odd
+public class Kata {
+  public static int[] sortArray(int[] array) {
+    int a = 0;
+    int b = 0;
+    int i = 0;
+    int s = 0;
+   
+    if (array.length == 0) return array;
+    
+    int z = 0;
+    while (z < 17) { 	
+   
+    for (i = 0; i < array.length; i++) {
+      if (array[i]%2 != 0) {
+        a = array[i];
+        
+        for (s = i+1; s < array.length; s++) {       	
+           if (array[s]%2 != 0) {
+             b = array[s];
+             break;
+           }
+        }
+        
+        if (a > b && s < array.length) {
+          array[i] = b;
+          array[s] = a;
+        } else {
+          array[i] = a;
+          if (s < array.length) array[s] = b;
+        }
+      
+      }
+      z++;
+    }
+    }
+    
+  return array;
+  }
+}
+
