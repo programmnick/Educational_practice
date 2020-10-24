@@ -228,3 +228,48 @@ public class Kata {
   }
 }
 
+Take a Ten Minute Walk
+public class TenMinWalk {
+  public static boolean isValid(char[] walk) {
+    int countn = 0, counts = 0, countw = 0, counte = 0;
+
+    for (int i = 0; i < walk.length; i++) {
+      switch (walk[i]) {
+          case 'n': countn++;
+                    break;
+          case 's': counts++;
+                    break;
+          case 'w': countw++;
+                    break;
+          case 'e': counte++;
+                    break;
+      }   
+    }
+    
+    if (((countn == counts) && (countw == counte)) && walk.length == 10) return true;
+    
+    return false;
+  }
+}
+
+Find The Parity Outlier
+
+public class FindOutlier{
+  static int find(int[] integers){
+    int even = 0;
+    
+    for (int i = 0; i < integers.length; i++) {
+       if (integers[i]%2 == 0) even++;
+     }
+    
+    if (even > 1) {
+      for (int i = 0; i < integers.length; i++) {
+       if (integers[i]%2 != 0) return integers[i];
+     }
+    } else {
+      for (int i = 0; i < integers.length; i++) {
+       if (integers[i]%2 == 0) return integers[i];
+     }
+    }
+  return 0;
+}}
