@@ -8,4 +8,5 @@ The lessons that i learned from the site http://developer.alexanderklimov.ru/ {
 	ArrayAdapter http://developer.alexanderklimov.ru/android/listview/multiselect_customarrayadapter.php;
 }
 
-Repeated the lessons I learned on udacity
+
+Repeated the lessons I learned on udacity 
