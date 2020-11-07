@@ -306,3 +306,46 @@ public class Kata {
     return true;
   }
 }
+
+Two Sum
+public class Solution
+{
+    public static int[] twoSum(int[] numbers, int target)
+    {
+      for (int i = 0; i < numbers.length; i++) {
+        for (int x = 0; x < numbers.length; x++) {          
+          if ( numbers[i] + numbers[x] == target ) {
+            int[] result = new int [2];
+            result[0] = i;
+            result[1] = x;
+            return result;
+          }
+        }        
+      }
+      return null;
+    }
+}
+
+Integers: Recreation One
+public class SumSquaredDivisors {
+	
+	public static String listSquared(long m, long n) {
+		String result = "";
+    for (long i = m; i < n+1; i++) {
+      int sum = 0;
+      for (long x = 1; x < i+1; x++) {        
+        if (i % x == 0) sum += x*x;
+        
+        if (x == i) {
+          double j = Math.sqrt(sum);
+          if (j % 2 == 1 || j % 2 == 0) {
+            if (!result.equals("")) result += ", ";
+            result += "[" + i + ", " + sum + "]";
+          }
+        }
+      }
+    }
+    String finResult = "[" + result + "]";
+    return finResult;
+	}
+}
