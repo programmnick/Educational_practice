@@ -9,4 +9,4 @@ The lessons that i learned from the site http://developer.alexanderklimov.ru/ {
 }
 
 
-Repeating the lessons I learned on udacity x2
+Repeating the lessons I learned on udacity x3
