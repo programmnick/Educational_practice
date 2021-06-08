@@ -1,6 +1,6 @@
 Here I will post progress information on my android training.
 
-Downloaded and configured android studio + AVD. Tested the first app.
+Downloaded and configured android studio + AVD. Tested my first app.
 
 
 The lessons that i learned from the site http://developer.alexanderklimov.ru/ {
@@ -8,5 +8,12 @@ The lessons that i learned from the site http://developer.alexanderklimov.ru/ {
 	ArrayAdapter http://developer.alexanderklimov.ru/android/listview/multiselect_customarrayadapter.php;
 }
 
+Progress with courses {
+	Udacity - look at "Udacity courses txt" in the folder;
+}
 
-Repeating the lessons I learned on udacity x3
+Progress with reading books {
+	Head First Java (Kathy Sierra, Bert Bates) - 100%;
+	Core Java Fundamentals (Сау S. Horstmann) - 113 / 866;
+
+}
