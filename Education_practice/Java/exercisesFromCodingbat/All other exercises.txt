@@ -68,3 +68,70 @@ public int blackjack(int a, int b) {
   
   return 0;
 }
+
+Logic-2 loneSum
+public int loneSum(int a, int b, int c) {
+    if (a == b && b == c) return 0;
+    if (a == b) {
+      a = 0;
+      b = 0;
+    }
+     if (b == c) {
+      b = 0;
+      c = 0;
+    }
+     if (a == c) {
+      a = 0;
+      c = 0;
+    }
+  return a+b+c;
+}
+
+Logic-2 luckySum
+public int luckySum(int a, int b, int c) {
+  if (a == 13){
+    a = 0;
+    b = 0;
+    c = 0;
+  }
+  if (b == 13){
+    b = 0;
+    c = 0;
+  }
+  if (c == 13) c = 0;
+  
+  return a+b+c;
+}
+
+String-2 mixString 
+public String mixString(String a, String b) {
+  String c = "";
+  String result = "";
+  if (a.length() > b.length()) c += a; else c += b;
+  for (int i = 0; i < c.length(); i++) {
+    if (i < a.length()) result += a.charAt(i);
+    if (i < b.length()) result += b.charAt(i);
+  }
+  return result;
+}
+
+String-2 endOther
+public boolean endOther(String a, String b) {
+  String c = "";
+  String mainStr = "";
+  if (a.length() > b.length()){ 
+    c += b;
+    mainStr += a; 
+    }
+    else {
+      c += a;
+      mainStr += b;
+    }
+  
+  for (int i = 0; i + c.length()-1 < mainStr.length(); i++) {
+      if (mainStr.substring(mainStr.length() - c.length(), mainStr.length()).toLowerCase().equals(c.toLowerCase())) 
+      return true;
+    
+  }
+  return false;
+}
