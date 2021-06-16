@@ -14,5 +14,5 @@ Progress with courses {
 
 Progress with reading books {
 	Head First Java (Kathy Sierra, Bert Bates) - 100%;
-	Core Java Fundamentals (Сау S. Horstmann) - 173 / 866;
+	Core Java Fundamentals (Сау S. Horstmann) - 188 / 866;
 }
