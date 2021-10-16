@@ -176,3 +176,37 @@ public int makeChocolate(int small, int big, int goal) {
   
   return -1;
 }
+
+
+in1To10
+public boolean in1To10(int n, boolean outsideMode) {
+  if (outsideMode) {
+    if (n <= 1 || n >= 10) return true;
+      else return false;
+  }
+
+  if (n >= 1 && n <= 10) return true;
+  return false;
+}
+
+
+inOrderEqual
+public boolean inOrderEqual(int a, int b, int c, boolean equalOk) {
+  if ((equalOk) && ((a <= b) && (b <= c))) {
+    return true;
+  } else {
+    if ((a < b && b < c)) return true;
+  }
+  return false;
+}
+
+
+answerCell
+public boolean answerCell(boolean isMorning, boolean isMom, boolean isAsleep) {
+  if (isAsleep) return false;
+  if (isMorning && isMom) return true;
+    else
+      if (isMorning) return false;
+
+  return true;
+}
